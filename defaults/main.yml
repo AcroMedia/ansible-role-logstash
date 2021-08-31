@@ -22,3 +22,7 @@ logstash_enabled_on_boot: true
 logstash_install_plugins:
   - logstash-input-beats
   - logstash-filter-multiline
+
+
+logstash_elasticsearch_output_index_pattern: >-
+  %{[@metadata][beat]}-%{+YYYY.MM.dd}
